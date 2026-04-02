@@ -3,38 +3,55 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Affixo MedControl Standard — Demo</title>
+  <title>Affixo MedControl — Контроль приёма препаратов</title>
+
   <style>
     body{
       font-family:Arial,sans-serif;
-      max-width:1024px;
+      max-width:980px;
       margin:40px auto;
       padding:0 16px;
       color:#111;
       line-height:1.5;
-      background:#fff;
     }
+
+    h1,h2{margin:0 0 12px}
+
     .hero,.card{
       border:1px solid #ddd;
       border-radius:14px;
       background:#fff;
     }
+
     .hero{padding:28px;margin-bottom:18px}
     .card{padding:18px;margin-bottom:14px}
-    h1,h2{margin:0 0 12px}
+
     .muted{color:#666}
-    .inline{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-    a.btn{
+
+    .btn{
       display:inline-block;
       text-decoration:none;
-      color:inherit;
-      border:1px solid #111;
+      color:#fff;
+      background:#111;
       border-radius:10px;
-      padding:10px 14px;
+      padding:12px 16px;
     }
-    a.btn.secondary{
-      border-color:#ddd;
+
+    .btn.secondary{
+      background:#fff;
+      color:#111;
+      border:1px solid #ddd;
     }
+
+    .inline{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    ul{margin:8px 0 0 20px}
+
     .pill{
       display:inline-block;
       padding:4px 8px;
@@ -43,114 +60,134 @@
       font-size:12px;
       background:#fafafa;
     }
-    ul{margin:8px 0 0 20px}
+
     .grid{
       display:grid;
       grid-template-columns:1fr 1fr 1fr;
       gap:14px;
     }
+
     .step{
       border:1px solid #eee;
       border-radius:12px;
       padding:14px;
       background:#fafafa;
     }
-    .step strong{
-      display:block;
-      margin-bottom:6px;
-    }
+
     @media(max-width:860px){
       .grid{grid-template-columns:1fr}
     }
   </style>
 </head>
+
 <body>
+
+  <!-- HERO -->
   <section class="hero">
+
     <div class="inline" style="margin-bottom:10px">
       <span class="pill">Affixo MedControl</span>
       <span class="pill">Standard</span>
-      <span class="pill">Demo</span>
     </div>
 
-    <h1>Контроль приёма препаратов без путаницы, пропусков и лишних действий</h1>
+    <h1>Вы всегда знаете, что и когда нужно принять</h1>
 
     <p class="muted">
-      MedControl Standard — это простая 3-страничная система:
-      сначала ввод данных, затем чистое табло текущих задач,
-      затем отдельная страница фиксации действий.
+      Без записей, напоминаний и путаницы.  
+      Открыли — и сразу видите текущие задачи и действия.
     </p>
 
-    <div class="inline" style="margin-top:16px">
-      <a class="btn" href="input.html">Начать работу</a>
+    <ul>
+      <li>что нужно принять сейчас</li>
+      <li>что уже принято</li>
+      <li>что пропущено</li>
+    </ul>
+
+    <div class="inline" style="margin-top:18px">
+      <a class="btn" href="input.html">Начать контроль сейчас</a>
       <a class="btn secondary" href="dashboard.html">Посмотреть табло</a>
-      <a class="btn secondary" href="action.html">Открыть принятие</a>
-      <a class="btn secondary" href="settings.html">Открыть настройки</a>
     </div>
+
+    <p class="muted" style="margin-top:10px">
+      Без регистрации • Без установки • Работает сразу
+    </p>
+
   </section>
 
+  <!-- FOR WHO -->
   <section class="card">
     <h2>Для кого это</h2>
     <ul>
       <li>для личного контроля приёма препаратов</li>
       <li>для семьи и сопровождения близкого человека</li>
-      <li>для ежедневной работы, где важны простота, точность и ясность</li>
+      <li>для ежедневной практики без перегрузки интерфейса</li>
     </ul>
   </section>
 
+  <!-- HOW -->
   <section class="card">
     <h2>Как это работает</h2>
+
     <div class="grid">
+
       <div class="step">
         <strong>1. Ввод</strong>
         <div class="muted">
-          Все строки препаратов, активен / пассивен, расписание, продление и история изменений строки.
+          Добавляете препараты, задаёте расписание, управляете активностью.
         </div>
       </div>
 
       <div class="step">
         <strong>2. Табло</strong>
         <div class="muted">
-          Только активные и только незакрытые задачи на сегодня. Без перегрузки и без лишних кнопок.
+          Видите только текущие задачи на сегодня. Ничего лишнего.
         </div>
       </div>
 
       <div class="step">
         <strong>3. Принятие</strong>
         <div class="muted">
-          Принял, Отменить, Исправить, фактическая дата и время действия, история приёма.
+          Фиксируете действия: принял, отменил, исправил.
         </div>
       </div>
+
     </div>
   </section>
 
+  <!-- BENEFITS -->
   <section class="card">
-    <h2>Почему это удобно</h2>
+    <h2>Почему это работает</h2>
     <ul>
       <li>одна строка = один препарат</li>
-      <li>на первой странице видны все строки, на второй и третьей — только активные</li>
-      <li>после нажатия «Принял» слот исчезает с табло</li>
-      <li>история строки и история приёма разделены и не мешают интерфейсу</li>
-      <li>дата и время фиксируются автоматически</li>
-      <li>название препарата и custom dose можно вводить на любом языке</li>
+      <li>никакого перегруженного интерфейса</li>
+      <li>после «Принял» задача исчезает</li>
+      <li>всё фиксируется по времени автоматически</li>
+      <li>история всегда доступна, но не мешает работе</li>
     </ul>
   </section>
 
+  <!-- CORE IDEA -->
   <section class="card">
     <h2>Главный принцип</h2>
     <p class="muted">
-      Вместо хаоса из записей, напоминаний и устных уточнений пользователь получает одну понятную систему:
-      ввод, текущее табло и отдельную страницу действий.
+      Не нужно думать и вспоминать.  
+      Система показывает, что делать прямо сейчас.
     </p>
   </section>
 
+  <!-- CTA -->
   <section class="card">
-    <h2>Готовы начать?</h2>
+    <h2>Попробуйте сейчас</h2>
+
     <p>
-      Откройте приложение и посмотрите реальную рабочую логику уже сейчас.
+      Откройте приложение и посмотрите, как это работает в реальности.
     </p>
+
     <div class="inline">
-      <a class="btn" href="input.html">Начать работу</a>
+      <a class="btn" href="input.html">Начать контроль сейчас</a>
     </div>
+
   </section>
+
 </body>
 </html>
