@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>MedControl Standard — Demo</title>
+  <title>Affixo MedControl Standard — Demo</title>
   <style>
-    body{font-family:Arial,sans-serif;max-width:980px;margin:40px auto;padding:0 16px;color:#111;line-height:1.5}
+    body{font-family:Arial,sans-serif;max-width:1024px;margin:40px auto;padding:0 16px;color:#111;line-height:1.5;background:#fff}
     .hero,.card{border:1px solid #ddd;border-radius:14px;background:#fff}
-    .hero{padding:24px;margin-bottom:18px}
+    .hero{padding:28px;margin-bottom:18px}
     .card{padding:18px;margin-bottom:14px}
     h1,h2{margin:0 0 12px}
     .muted{color:#666}
@@ -16,6 +16,8 @@
     .ghost{border-color:#ddd}
     .pill{display:inline-block;padding:4px 8px;border:1px solid #ddd;border-radius:999px;font-size:12px;background:#fafafa}
     ul{margin:8px 0 0 20px}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    @media(max-width:760px){.grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -25,13 +27,15 @@
       <span class="pill">Standard</span>
       <span class="pill">Demo</span>
     </div>
-    <h1>Контроль приёма препаратов без путаницы</h1>
+
+    <h1>Контроль приёма препаратов без путаницы, пропусков и лишних действий</h1>
     <p class="muted">
-      MedControl Standard — это простая 3-страничная система:
-      ввод данных, онлайн-табло и страница фиксации приёма.
+      MedControl Standard — это простая и понятная 3-страничная система для ежедневной работы:
+      ввод препаратов, онлайн-табло текущих задач и отдельная страница фиксации приёма.
     </p>
+
     <div class="inline" style="margin-top:14px">
-      <a class="btn" href="input.html">Открыть приложение</a>
+      <a class="btn" href="input.html">Попробовать demo</a>
       <a class="btn ghost" href="dashboard.html">Открыть табло</a>
       <a class="btn ghost" href="action.html">Открыть принятие</a>
       <a class="btn ghost" href="settings.html">Открыть настройки</a>
@@ -39,38 +43,58 @@
   </section>
 
   <section class="card">
-    <h2>Что получает пользователь</h2>
+    <h2>Для кого подходит</h2>
     <ul>
-      <li>1-я страница: ввод всех строк препаратов, активен / пассивен, расписание, продление, история строки.</li>
-      <li>2-я страница: только активные и только незакрытые задачи на сегодня.</li>
-      <li>3-я страница: Принял, Отменить, Исправить, фактическая дата и время действия, история приёма.</li>
+      <li>для личного контроля приёма препаратов</li>
+      <li>для семьи и сопровождения близкого человека</li>
+      <li>для повседневной работы, где важны простота, время и отсутствие путаницы</li>
     </ul>
   </section>
 
   <section class="card">
-    <h2>Ключевая логика</h2>
+    <h2>Как устроена система</h2>
+    <div class="grid">
+      <div>
+        <strong>1. Ввод</strong>
+        <p class="muted">Все строки препаратов, активен / пассивен, расписание, продление, история изменений строки.</p>
+      </div>
+      <div>
+        <strong>2. Табло</strong>
+        <p class="muted">Только активные и только незакрытые задачи на сегодня. Без перегрузки и лишних действий.</p>
+      </div>
+      <div>
+        <strong>3. Принятие</strong>
+        <p class="muted">Принял, Отменить, Исправить, фактическая дата и время действия, история по каждому препарату.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Главные преимущества</h2>
     <ul>
-      <li>Одна строка = один препарат.</li>
-      <li>На 1-й странице видны все строки, на 2-й и 3-й — только активные.</li>
-      <li>После «Принял» слот исчезает с табло.</li>
-      <li>Название препарата и custom dose можно вводить на любом языке.</li>
+      <li>одна строка = один препарат</li>
+      <li>на первой странице видны все строки, на второй и третьей — только активные</li>
+      <li>после нажатия «Принял» слот исчезает с табло</li>
+      <li>история строки и история приёма разделены и не мешают интерфейсу</li>
+      <li>дата и время фиксируются автоматически</li>
+      <li>название препарата и custom dose можно вводить на любом языке</li>
     </ul>
   </section>
 
   <section class="card">
-    <h2>Для кого это</h2>
-    <ul>
-      <li>для личного контроля приёма</li>
-      <li>для семейного сопровождения</li>
-      <li>для простой и понятной ежедневной работы без перегрузки интерфейса</li>
-    </ul>
+    <h2>Почему это удобно</h2>
+    <p class="muted">
+      Вместо хаоса из записей, напоминаний и устных уточнений пользователь получает одну понятную систему:
+      сначала ввод, затем чистое табло текущих задач, затем отдельную страницу для фиксации действий.
+    </p>
   </section>
 
   <section class="card">
-    <h2>Старт</h2>
-    <p>Для демонстрации начни с первой страницы приложения.</p>
+    <h2>Готовы начать?</h2>
+    <p>Откройте demo-приложение и посмотрите логику работы на реальном интерфейсе.</p>
     <div class="inline">
       <a class="btn" href="input.html">Перейти в demo-приложение</a>
+      <a class="btn ghost" href="dashboard.html">Сначала посмотреть табло</a>
     </div>
   </section>
 </body>
