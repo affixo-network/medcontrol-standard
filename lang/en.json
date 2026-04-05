@@ -1,0 +1,11 @@
+{
+  "app.name": "Affixo MedControl",
+  "nav.home": "Home",
+  "nav.input": "Input",
+  "nav.dashboard": "Dashboard",
+  "nav.action": "Action",
+  "nav.settings": "Settings",
+  "common.language": "Language",
+  "settings.title": "Settings",
+  "settings.choose": "Choose language"
+}
