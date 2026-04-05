@@ -1,1 +1,92 @@
-<!doctype html><html><head><meta charset="utf-8"><script src="core.js"></script></head><body><script>mount("home")</script></body></html>
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Affixo MedControl</title>
+  <style>
+    :root{--fg:#111827;--muted:#6b7280;--bd:#e5e7eb;--bg:#f8fafc;--card:#fff;--accent:#111827}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--fg);line-height:1.5}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px 16px 48px}
+    .hero,.card{background:var(--card);border:1px solid var(--bd);border-radius:16px}
+    .hero{padding:28px;margin-bottom:18px}
+    .card{padding:20px;margin-bottom:16px}
+    h1,h2,h3{margin:0 0 12px}
+    p{margin:0 0 12px}
+    .muted{color:var(--muted)}
+    .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+    .btn{display:inline-block;text-decoration:none;padding:12px 16px;border-radius:12px;border:1px solid var(--accent);color:#fff;background:var(--accent)}
+    .btn.secondary{background:#fff;color:var(--fg);border-color:var(--bd)}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+    .step{background:#fafafa;border:1px solid var(--bd);border-radius:14px;padding:14px}
+    .pill{display:inline-block;padding:4px 10px;border-radius:999px;border:1px solid var(--bd);background:#fff;font-size:12px;margin-right:6px}
+    ul{margin:8px 0 0 18px;padding:0}
+    li{margin:6px 0}
+    @media(max-width:900px){.grid,.steps{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div style="margin-bottom:10px">
+        <span class="pill">Affixo MedControl</span>
+        <span class="pill">Standard</span>
+        <span class="pill">Offline</span>
+      </div>
+      <h1>Контроль приёма препаратов по расписанию</h1>
+      <p class="muted">Пользователь задаёт правила и отмечает результат. Система автоматически рассчитывает текущее состояние на день, учитывает время устройства и сразу отражает изменения на Табло.</p>
+      <div class="actions">
+        <a class="btn" href="input.html">Открыть Ввод</a>
+        <a class="btn secondary" href="dashboard.html">Открыть Табло</a>
+        <a class="btn secondary" href="action.html">Открыть Принятие</a>
+        <a class="btn secondary" href="settings.html">Открыть Настройки</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Как устроен интерфейс</h2>
+      <div class="steps">
+        <div class="step"><h3>1. Настройки</h3><p class="muted">Автоопределение языка и часового пояса устройства, ручная смена языка интерфейса, описание автоматической логики и рабочего режима.</p></div>
+        <div class="step"><h3>2. Ввод</h3><p class="muted">Добавление препарата, дозы, расписания, времени, даты начала и окончания, перевод в режим Активно / Пассивно.</p></div>
+        <div class="step"><h3>3. Табло</h3><p class="muted">Показывает состояния текущего дня: Ожидается, Предстоит, Просрочено. История здесь не отображается.</p></div>
+        <div class="step"><h3>4. Принятие</h3><p class="muted">Фиксация результата, фактического времени, статусов приёма и просмотр истории выбранной строки во всплывающем окне.</p></div>
+      </div>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Что делает пользователь</h2>
+        <ul>
+          <li>добавляет препарат</li>
+          <li>задаёт расписание и время</li>
+          <li>при необходимости задаёт дату начала и окончания</li>
+          <li>отмечает факт приёма</li>
+        </ul>
+      </section>
+      <section class="card">
+        <h2>Что делает система</h2>
+        <ul>
+          <li>использует локальное время устройства</li>
+          <li>учитывает часовой пояс автоматически</li>
+          <li>формирует текущий день по активным препаратам</li>
+          <li>фиксирует фактическое время отметки</li>
+          <li>определяет статусы: вовремя, досрочно, с опозданием, просрочено</li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="card">
+      <h2>Последовательность работы</h2>
+      <p><strong>Ввод → Табло → Принятие</strong></p>
+      <ul>
+        <li><strong>Ввод</strong> создаёт правило приёма.</li>
+        <li><strong>Табло</strong> показывает ожидание по этому правилу.</li>
+        <li><strong>Принятие</strong> фиксирует фактический результат.</li>
+        <li><strong>История</strong> сохраняет записи выбранной строки во всплывающем окне.</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
