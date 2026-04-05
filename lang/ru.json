@@ -1,0 +1,11 @@
+{
+  "app.name": "Affixo MedControl",
+  "nav.home": "Главная",
+  "nav.input": "Ввод",
+  "nav.dashboard": "Табло",
+  "nav.action": "Принятие",
+  "nav.settings": "Настройки",
+  "common.language": "Язык",
+  "settings.title": "Настройки",
+  "settings.choose": "Выбрать язык"
+}
